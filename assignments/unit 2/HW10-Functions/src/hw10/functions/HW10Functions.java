@@ -36,7 +36,7 @@ public class HW10Functions {
         System.out.println("♡∙   -WELCOME TO DOMENICA'S PROGRAM-   ∙♡");
         System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
        
-       System.out.println(" ➤ Please enter 2 numbers to do division 🡳 ");
+        System.out.println(" ➤ Please enter 2 numbers to do division 🡳 ");
         Scanner input = new Scanner(System.in);
         dividend = input.nextInt();
         dividier = input.nextInt();
