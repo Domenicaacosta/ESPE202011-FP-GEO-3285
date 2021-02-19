@@ -42,7 +42,13 @@ public class HW12Libraries {
                     double total;
                     iva = 0.12;
 
-                    CalculateValueAddedTax(input, iva);
+                    System.out.println("Please enter the cost you want to calculate Value added tax");
+                    cost = input.nextDouble();
+                    ValueAddedTax = CalculateValueAddedTax(cost, iva);
+                    total = CalculateTotalToPayValueAddedTax(cost, ValueAddedTax);
+                    System.out.println("The Value added tax of " + cost + " is " + ValueAddedTax);
+                    System.out.println(" The total you have to pay is " + total);
+                    System.out.println("                                        ");
                     break;
 
                 case 2:
@@ -52,37 +58,63 @@ public class HW12Libraries {
                     double difference;
                     double porcentage;
 
-                    taxBase = CalculatetaxBase(input);
-
+                    System.out.println("Please write your income");
+                    income = input.nextDouble();
+                    System.out.println("Plase write your expenses");
+                    expenses = input.nextDouble();
+                    taxBase = CalculateTaxBase(income, expenses);
+                    System.out.println("yout tax base is --> " + taxBase);
+                    System.out.println("                                        ");
                     if (taxBase > 0 && taxBase <= 11212) {
+
                         CalculateBasicFraction1(taxBase);
+                        System.out.println(" The contribution is not made ");
                     } else {
                         if (taxBase > 11212 && taxBase <= 14285) {
-                            CalculateBasicFraction2(taxBase);
-
+                            total = CalculateBasicFraction2(taxBase);
+                            System.out.println(" The Income Tax is " + total);
+                            System.out.println("                                        ");
                         } else {
                             if (taxBase > 14285 && taxBase <= 17854) {
-                                CalculateBasicFraction3(taxBase);
 
+                                total = CalculateBasicFraction3(taxBase);
+                                System.out.println(" The Income Tax is " + total);
+                                System.out.println("                                        ");
                             } else {
                                 if (taxBase > 17854 && taxBase <= 21442) {
-                                    CalculateBasicFraction4(taxBase);
 
+                                    total = CalculateBasicFraction4(taxBase);
+                                    System.out.println(" The Income Tax is " + total);
+                                    System.out.println("                                        ");
                                 } else {
                                     if (taxBase > 21442 && taxBase <= 42874) {
-                                        CalculateBasicFraction5(taxBase);
+
+                                        total = CalculateBasicFraction5(taxBase);
+                                        System.out.println(" The Income Tax is " + total);
+                                        System.out.println("                                        ");
                                     } else {
                                         if (taxBase > 42874 && taxBase <= 64297) {
-                                            CalculateBasicFraction6(taxBase);
+                                            total = CalculateBasicFraction6(taxBase);
+                                            System.out.println(" The Income Tax is " + total);
+                                            System.out.println("                                        ");
                                         } else {
                                             if (taxBase > 64297 && taxBase <= 85729) {
-                                                CalculateBasicFraction7(taxBase);
+
+                                                total = CalculateBasicFraction7(taxBase);
+                                                System.out.println(" The Income Tax is " + total);
+                                                System.out.println("                                        ");
                                             } else {
                                                 if (taxBase > 85729 && taxBase <= 114288) {
-                                                    CalculateBasicFraction8(taxBase);
+
+                                                    total = CalculateBasicFraction8(taxBase);
+                                                    System.out.println(" The Income Tax is " + total);
+                                                    System.out.println("                                        ");
                                                 } else {
                                                     if (taxBase > 114288) {
-                                                        CalculateBasicFraction9(taxBase);
+
+                                                        total = CalculateBasicFraction9(taxBase);
+                                                        System.out.println(" The Income Tax is " + total);
+                                                        System.out.println("                                        ");
                                                     }
 
                                                 }
@@ -107,10 +139,31 @@ public class HW12Libraries {
 
                     switch (selection) {
                         case 1:
-                            calculateTaxToSendMoney(input);
+
+                            System.out.println(" Please enter how much money you will take ");
+                            Money = input.nextDouble();
+                            if (Money > 1200) {
+                                CapitalOutflowTax = CalculateMoneyToSendTax(Money);
+                                System.out.println(" The capital Outflow Tax is " + CapitalOutflowTax);
+                                System.out.println("                                        ");
+
+                            } else {
+                                System.out.println(" you haven't to pay any tax ");
+                                System.out.println("                                        ");
+                            }
                             break;
                         case 2:
-                            CalculateMoneySpendOnAbroad(input);
+
+                            System.out.println("Please enter how you spend on abroad ");
+                            SpendAbroad = input.nextDouble();
+                            if (SpendAbroad > 5017.33) {
+                                CapitalOutflowTax = CalculateMoneySpendOnAbroad(SpendAbroad);
+                                System.out.println(" The capital Outflow Tax is " + CapitalOutflowTax);
+                                System.out.println("                                        ");
+                            } else {
+                                System.out.println(" you haven't to pay any tax ");
+                                System.out.println("                                        ");
+                            }
                             break;
 
                     }
@@ -120,113 +173,96 @@ public class HW12Libraries {
 
     }
 
-    private static void CalculateMoneySpendOnAbroad(Scanner input) {
-        double SpendAbroad;
+    private static double CalculateMoneySpendOnAbroad(double SpendAbroad) {
         double CapitalOutflowTax;
-        System.out.println("Please enter how you spend on abroad ");
-        SpendAbroad = input.nextDouble();
-        if (SpendAbroad > 5017.33) {
-            CapitalOutflowTax = (SpendAbroad - 5017.33) * 0.05;
-            System.out.println(" The capital Outflow Tax is " + CapitalOutflowTax);
-        } else {
-            System.out.println(" you haven't to pay any tax ");
-        }
-        return;
+        CapitalOutflowTax = (SpendAbroad - 5017.33) * 0.05;
+        return CapitalOutflowTax;
     }
 
-    private static void calculateTaxToSendMoney(Scanner input) {
-        double Money;
+    private static double CalculateMoneyToSendTax(double Money) {
         double CapitalOutflowTax;
-        System.out.println(" Please enter how much money you will take ");
-        Money = input.nextDouble();
-        if (Money > 1200) {
-            CapitalOutflowTax = (Money - 1200) * 0.05;
-            System.out.println(" The capital Outflow Tax is " + CapitalOutflowTax);
-
-        } else {
-            System.out.println(" you haven't to pay any tax ");
-        }
-        return;
+        CapitalOutflowTax = (Money - 1200) * 0.05;
+        return CapitalOutflowTax;
     }
 
-    private static void CalculateBasicFraction9(double taxBase) {
+    private static double CalculateBasicFraction9(double taxBase) {
         double difference;
         double porcentage;
         double total;
         difference = taxBase - 114288;
         porcentage = difference * 0.35;
         total = porcentage + 22366;
-        System.out.println(" The Income Tax is " + total);
+        return total;
     }
 
-    private static void CalculateBasicFraction8(double taxBase) {
+    private static double CalculateBasicFraction8(double taxBase) {
         double difference;
         double porcentage;
         double total;
         difference = taxBase - 85729;
         porcentage = difference * 0.3;
         total = porcentage + 13798;
-        System.out.println(" The Income Tax is " + total);
+        return total;
     }
 
-    private static void CalculateBasicFraction7(double taxBase) {
+    private static double CalculateBasicFraction7(double taxBase) {
         double difference;
         double porcentage;
         double total;
         difference = taxBase - 64297;
         porcentage = difference * 0.25;
         total = porcentage + 8440;
-        System.out.println(" The Income Tax is " + total);
+        return total;
     }
 
-    private static void CalculateBasicFraction6(double taxBase) {
+    private static double CalculateBasicFraction6(double taxBase) {
         double difference;
         double porcentage;
         double total;
         difference = taxBase - 42874;
         porcentage = difference * 0.2;
         total = porcentage + 4156;
-        System.out.println(" The Income Tax is " + total);
+        return total;
     }
 
-    private static void CalculateBasicFraction5(double taxBase) {
+    private static double CalculateBasicFraction5(double taxBase) {
         double difference;
         double porcentage;
         double total;
         difference = taxBase - 21442;
         porcentage = difference * 0.15;
         total = porcentage + 941;
-        System.out.println(" The Income Tax is " + total);
+        return total;
     }
 
-    private static void CalculateBasicFraction4(double taxBase) {
+    private static double CalculateBasicFraction4(double taxBase) {
         double difference;
         double porcentage;
         double total;
         difference = taxBase - 17854;
         porcentage = difference * 0.12;
         total = porcentage + 511;
-        System.out.println(" The Income Tax is " + total);
+        return total;
     }
 
-    private static void CalculateBasicFraction3(double taxBase) {
+    private static double CalculateBasicFraction3(double taxBase) {
         double difference;
         double porcentage;
         double total;
         difference = taxBase - 14285;
         porcentage = difference * 0.1;
         total = porcentage + 154;
-        System.out.println(" The Income Tax is " + total);
+        return total;
     }
 
-    private static void CalculateBasicFraction2(double taxBase) {
+    private static double CalculateBasicFraction2(double taxBase) {
         double difference;
         double porcentage;
         double total;
         difference = taxBase - 11212;
         porcentage = difference * 0.05;
         total = porcentage + 0;
-        System.out.println(" The Income Tax is " + total);
+        return total;
     }
 
     private static void CalculateBasicFraction1(double taxBase) {
@@ -236,34 +272,24 @@ public class HW12Libraries {
         difference = taxBase - 0;
         porcentage = difference * 0;
         total = porcentage + 0;
-        System.out.println(" The contribution is not made ");
     }
 
-    private static double CalculatetaxBase(Scanner input) {
-        double income;
-        double expenses;
+    private static double CalculateTaxBase(double income, double expenses) {
         double taxBase;
-        System.out.println("Please write your income");
-        income = input.nextDouble();
-        System.out.println("Plase write your expenses");
-        expenses = input.nextDouble();
         taxBase = income - expenses;
-        System.out.println("yout tax base is --> " + taxBase);
         return taxBase;
     }
 
-    private static void CalculateValueAddedTax(Scanner input, double iva) {
-        double cost;
-        double ValueAddedTax;
+    private static double CalculateTotalToPayValueAddedTax(double cost, double ValueAddedTax) {
         double total;
-        System.out.println("Please enter the cost you want to calculate Value added tax");
-        cost = input.nextDouble();
-        ValueAddedTax = cost * iva;
         total = cost + ValueAddedTax;
-        System.out.println("The Value added tax of " + cost + " is " + ValueAddedTax);
-        System.out.println(" The total you have to pay is " + total);
-        System.out.println("                                        ");
-        return;
+        return total;
+    }
+
+    private static double CalculateValueAddedTax(double cost, double iva) {
+        double ValueAddedTax;
+        ValueAddedTax = cost * iva;
+        return ValueAddedTax;
     }
 
 }
