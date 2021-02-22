@@ -48,6 +48,8 @@ public class ArrayQuiz {
             System.out.println("the age pf customer " + (i + 1) + " -> " + ages);
         }
 
+        
+        
     }
 
 }
