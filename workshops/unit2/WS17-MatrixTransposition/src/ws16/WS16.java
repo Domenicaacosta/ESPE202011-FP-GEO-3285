@@ -45,14 +45,14 @@ public class WS16 {
         b = readMatrixElements(m, n, "B", input);
 
         for (int tab = 0; tab <= m / 2; tab++) {
-            System.out.print("\t");
+            System.out.println("\t");
         }
-        System.out.print(" A ");
+        System.out.println(" A ");
 
         prettyPrintMatrix(m, n, a);
         System.out.println("");
 
-        System.out.print(" B ");
+        System.out.println(" B ");
         prettyPrintMatrix(m, n, b);
 
         transpose(n, m, t, a);
@@ -61,7 +61,7 @@ public class WS16 {
             System.out.print("\t");
         }
 
-        System.out.print(" T ");
+        System.out.println(" T ");
         prettyPrintMatrix(n, m, t);
 
         System.out.println("-- The sum of matrices is --");
@@ -74,7 +74,7 @@ public class WS16 {
         float[][] matrix;
         matrix = new float[m][n];
         for (int i = 0; i < m; i++) {
-            System.out.print("--ROW Numbers--" + (i + 1) + "--");
+            System.out.println("--ROW Numbers--" + (i + 1) + "--");
             for (int j = 0; j < n; j++) {
                 System.out.print(matrixName + " [ " + (i + 1) + " ] [ " + (j + 1) + " ] --> ");
                 matrix[i][j] = input.nextFloat();
