@@ -36,7 +36,7 @@ public class HW11Refactory {
 
         number = input.nextInt();
         int sum = 0;
-        sum = AddOfnNumbers(number);
+        sum = AddOfNumbers(number);
         System.out.println("sum of " + number + " first numbers is equal to --> " + sum);
 
         // Project

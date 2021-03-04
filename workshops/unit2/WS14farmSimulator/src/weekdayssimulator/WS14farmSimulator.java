@@ -18,20 +18,18 @@ public class WS14farmSimulator {
      */
     public static void main(String[] args) {
         // Constante
-        final float pi=3.14F;
-        final float g=9.8F;
-        
+        final float pi = 3.14F;
+        final float g = 9.8F;
+
         int[] eggsByCoop;
         String[] chickens = {"Lucy", "Maruja", "Pepita"};
-        float[] weightsByCoop = { 1.2F, 2.4F, 45.2F, 80.1F, 4.3F, 4.5F};
+        float[] weightsByCoop = {1.2F, 2.4F, 45.2F, 80.1F, 4.3F, 4.5F};
         Scanner input = new Scanner(System.in);
         int n;
         System.out.println("Enter the name of coops -> ");
         n = input.nextInt();
 
         eggsByCoop = new int[n];
-        
-        
 
         for (int i = 0; i < n; i++) {
             System.out.print("Enter the number of eggs of the coop " + (i + 1) + " -> ");
@@ -49,12 +47,11 @@ public class WS14farmSimulator {
         for (String chicken : chickens) {
             System.out.println("chicken name -> " + chicken);
         }
-        
-        for (int i = 0; i < weightsByCoop.length ; i++) {
+
+        for (int i = 0; i < weightsByCoop.length; i++) {
             System.out.println("weight of coop " + (i + 1) + " -> " + weightsByCoop[i]);
         }
 
     }
 
-}                           
-   
+}
