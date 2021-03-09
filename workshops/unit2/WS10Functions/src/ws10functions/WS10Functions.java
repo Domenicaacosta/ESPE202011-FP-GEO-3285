@@ -24,6 +24,8 @@ public class WS10Functions {
 
         // call to divideTwoNumbers() function
         
+        System.out.println("AUTHOR: DOMENICA ACOSTA");
+        
         quotient = divideTwoNumbers(5,10);
         System.out.println("Quotient of 5 and 10 is --> " + quotient);
         

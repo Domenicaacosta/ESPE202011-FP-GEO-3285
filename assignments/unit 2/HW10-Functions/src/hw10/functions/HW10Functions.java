@@ -31,7 +31,8 @@ public class HW10Functions {
         
         
         
-        
+        System.out.println("AUTHOR: DOMENICA ACOSTA");
+        System.out.println("");
         System.out.println("┏ー∪∪━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"); 
         System.out.println("♡∙   -WELCOME TO DOMENICA'S PROGRAM-   ∙♡");
         System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
