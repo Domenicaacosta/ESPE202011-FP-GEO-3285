@@ -33,7 +33,7 @@ public class WS15MatrixAddition {
         for (int i = 0; i < 3; i++) {
             System.out.println("");
             for (int j = 0; j < 3; j++) {
-                System.out.print("\t " + c[i][j]);
+                System.out.print("\t " + a[i][j]);
 
             }
         }
@@ -42,7 +42,7 @@ public class WS15MatrixAddition {
         for (int i = 0; i < 3; i++) {
             System.out.println("");
             for (int j = 0; j < 3; j++) {
-                System.out.print("\t " + c[i][j]);
+                System.out.print("\t " + b[i][j]);
             }
         }
 
