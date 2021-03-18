@@ -19,7 +19,7 @@ public class Sorting {
         
         System.out.println("UNSORTED INTEGERS");
         printArray(integeresToSort);
-        sortByBubbleSort(integeresToSort);
+        BubbleSort.sort(integeresToSort);
         System.out.println("");
         printArray(integeresToSort);
         
@@ -28,32 +28,31 @@ public class Sorting {
         System.out.println("");
         System.out.println("UNSORTED INTEGERS");
         printArray(integeresToSort2);
-        sortByBubbleSort(integeresToSort2);
+        BubbleSort.sort(integeresToSort2);
         System.out.println("");
         printArray(integeresToSort2);
+        
+        integeresToSort2 = new int [] {9,7,3,1,4};
+        
+        System.out.println("UNSORTED INTEGERS");
+        printArray(integeresToSort2);
+        BubbleSort.sort(integeresToSort2);
+        System.out.println("");
+        printArray(integeresToSort2);
+        
+        SelectionSort selectionsort = new SelectionSort();
+        
+        integeresToSort2 = new int [] {42,30,-5,7,1,50};
+        
+        System.out.println("Sorting integers by SELECTION SORT");
+        printArray(integeresToSort2);
+        int[] sortedArray = selectionsort.sort(integeresToSort2);
+        System.out.println("");
+        printArray(sortedArray);
+        
+        
     }
 
-    public static void sortByBubbleSort(int integers[]) {
-        //for (int i=0; i < integers.length; i++){
-        //}
-        int n = integers.length;
-        int temp;
-        for (int i = 0; i < n - 1; i++) { // es (-1) porque ya le escogio al primero
-            for (int j = 0; j < n - i - 1; j++) {
-                if (integers[j] > integers[j + 1]) {
-                    //Swap
-                    temp = integers[j];
-                    integers[j] = integers[j + 1];
-                    integers[j + 1] = temp;
-                }
-                System.out.println("sorting --> ");
-                printArray(integers);
-                
-            }
-            System.out.println("");
-        }
-    
-    }
 
     public static void printArray(int[] integers) {
         int n = integers.length;
