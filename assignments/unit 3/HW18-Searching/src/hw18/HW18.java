@@ -41,12 +41,12 @@ public class HW18 {
         System.out.println("Check 2020 Ecuadorian University ranking");
         int result;
         int[] university = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        //"USFQ", "ESPOL", "EPN", "PUCE", "UCE", "Universidad de Cuenca", "ESPE", "UEES", "UDLA", "UTPL"
-
         int p;
-
         int n;
         n = university.length;
+        //"USFQ", "ESPOL", "EPN", "PUCE", "UCE", "Universidad de Cuenca", "ESPE", "UEES", "UDLA", "UTPL"
+
+        
         System.out.println("Please enter the place you want to search");
 
         p = input.nextInt();
