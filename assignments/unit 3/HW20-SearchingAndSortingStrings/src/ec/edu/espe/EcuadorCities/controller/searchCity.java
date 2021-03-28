@@ -14,7 +14,7 @@ public class searchCity {
     public static int findCity(String[] array, String cityToFind) {
         int n = array.length;
        for (int i = 0; i < n; i++) {
-            if (cityToFind.equals(array[i])) {
+            if (cityToFind == (array[i])) {
                 return 1;
             }
         }

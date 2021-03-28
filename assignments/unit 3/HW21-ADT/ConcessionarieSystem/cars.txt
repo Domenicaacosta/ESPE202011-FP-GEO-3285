@@ -1,0 +1,5 @@
+
+Ford, Grey, Edge, 50900, 460, true
+Chevrolet, Black, Grand Vitara, 15799, 136, false
+Ford, Black, Explorer, 15000, 400, true
+Ford, Black, Edge, 50000, 300, true

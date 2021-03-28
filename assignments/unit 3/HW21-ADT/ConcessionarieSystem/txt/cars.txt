@@ -1,0 +1,8 @@
+
+Ford, Red, Sail, 12345, 678999, false
+Chevrolet, Red, Sail, 12345, 678999, false
+Chevrolet, Red, Sail, 120, 23000, true
+Ford, Grey, Explorer, 450, 79800, true
+Ford, Red, Sail, 7, 6, true
+Chevrolet, Withe, Sail, 23000, 130, true
+Chevrolet, Red, Grand Vitara, 12000, 160, false
