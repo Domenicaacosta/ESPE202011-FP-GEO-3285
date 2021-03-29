@@ -57,31 +57,19 @@ public class FileManager {
     }
 
     public static String read(String fileName) {
-        String direction = new String(), path = "C:\\Users\\Domenica\\OneDrive\\Desktop\\Programacion\\codigos github\\ESPE202011-FP-GEO-3285\\assignments\\unit 3\\HW21-ADT\\ConcessionarieSystem\\txt\\";
-        File document = new File(path);
-
-        FileReader fr = null;
-        BufferedReader read = null;
-        try {
-            fr = new FileReader(path);
-            read = new BufferedReader(fr);
-
-            while (read.ready()) {
-                direction += read.readLine();
+        
+        fileName = null;
+        String information = null;
+        String document = "C:\\Users\\Domenica\\OneDrive\\Desktop\\Programacion\\codigos github\\ESPE202011-FP-GEO-3285\\assignments\\unit 3\\HW21-ADT\\ConcessionarieSystem\\cars.txt";
+        try ( BufferedReader textBr = new BufferedReader(new FileReader(document))) {
+            while ((fileName = textBr.readLine()) != null) {
+                information = fileName;
             }
-
         } catch (IOException e) {
+            System.out.println("An error occurred.");
             e.printStackTrace();
-        } finally {
-            try {
-                if (null != fr) {
-                    fr.close();
-                }
-            } catch (Exception e2) {
-                e2.printStackTrace();
-            }
         }
-        return direction;
+        return information;
 
     }
 }

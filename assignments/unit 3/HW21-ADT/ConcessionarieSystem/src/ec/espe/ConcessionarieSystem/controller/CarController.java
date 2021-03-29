@@ -6,6 +6,7 @@
 package ec.espe.ConcessionarieSystem.controller;
 
 import ec.espe.ConcessionarieSystem.model.Car;
+import java.io.IOException;
 
 import utils.FileManager;
 
@@ -14,13 +15,14 @@ import utils.FileManager;
  * @author Domenica
  */
 public class CarController {
+
     public void save(Car car) {
 
-        String data = car.getBrand() + ", " + car.getColor() + ", " + car.getModel() + ", " + car.getPower() + ", " + car.getPrice() + ", " + car.isStandar();
+        String data = car.getBrand() + ", " + car.getModel() + ", " + car.getColor() + ", " + car.getPower() + "HP, " + " $" + car.getPrice() + ", " + car.isStandar();
         FileManager.save(data, "cars");
     }
 
-    public String read() {
+   public String read() {
 
         String data;
         data = FileManager.read("cars");

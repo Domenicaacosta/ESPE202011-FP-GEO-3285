@@ -3,3 +3,33 @@ Ford, Grey, Edge, 50900, 460, true
 Chevrolet, Black, Grand Vitara, 15799, 136, false
 Ford, Black, Explorer, 15000, 400, true
 Ford, Black, Edge, 50000, 300, true
+ChevroletGrand Vitara, Black, , 25000HP, $100, false
+ChevroletSail, Blue, , 12000HP, $100, true
+ChevroletGrand Vitara, Red, , 15200HP, $160, true
+ChevroletSail, Black, , 12000HP, $110, false
+FordExplorer, Red, , 56000HP, $132, true
+ChevroletSail, Grey, , 13000HP, $100, false
+FordEdge, Black, , 80000HP, $200, true
+FordExplorer, Red, , 67500HP, $120, true
+ChevroletSail, Black, , 12000HP, $100, false
+ChevroletGrand Vitara, Black, , 25799HP, $120, true
+ChevroletGrand Vitara, Grey, , 12000HP, $120, false
+FordSail, Red, , 2000HP, $100, true
+ChevroletGrand Vitara, Grey, , 15600HP, $120, true
+FordEdge, Red, , 56000HP, $110, true
+ChevroletSail, Red, , 14000HP, $100, false
+FordEdge, Red, , 74000HP, $120, false
+FordExplorer, Red, , 240000HP, $120, false
+ChevroletSail, Black, , 13000HP, $130, true
+FordEdge, Withe, , 45000HP, $120, false
+ChevroletGrand Vitara, Withe, , 13000HP, $160, false
+Chevrolet Grand Vitara, Red, 56000HP,  $120, true
+Chevrolet Sail, Red, 120HP,  $12000, true
+Ford Explorer, Black, 130HP,  $12000, false
+Chevrolet Sail, Red, 130HP,  $15700, true
+Chevrolet Sail, Withe, 145HP,  $15400, false
+Chevrolet Sail, Grey, 122HP,  $14000, true
+Chevrolet Grand Vitara, Black, 110HP,  $14799, false
+Chevrolet, Explorer, Blue, 130HP,  $15000, true
+Chevrolet, Grand Vitara, Red, 100HP,  $13999, false
+Chevrolet, Grand Vitara, Withe, 125HP,  $14500, false
