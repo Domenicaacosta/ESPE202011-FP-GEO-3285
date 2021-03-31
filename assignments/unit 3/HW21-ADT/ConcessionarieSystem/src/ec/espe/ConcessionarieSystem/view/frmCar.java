@@ -7,11 +7,9 @@ package ec.espe.ConcessionarieSystem.view;
 
 import ec.espe.ConcessionarieSystem.controller.CarController;
 import ec.espe.ConcessionarieSystem.model.Car;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import utils.FileManager;
+
+
 
 /**
  *

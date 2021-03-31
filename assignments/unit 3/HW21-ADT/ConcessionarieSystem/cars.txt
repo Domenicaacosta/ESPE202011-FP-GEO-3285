@@ -33,3 +33,9 @@ Chevrolet Grand Vitara, Black, 110HP,  $14799, false
 Chevrolet, Explorer, Blue, 130HP,  $15000, true
 Chevrolet, Grand Vitara, Red, 100HP,  $13999, false
 Chevrolet, Grand Vitara, Withe, 125HP,  $14500, false
+Chevrolet, Grand Vitara, Grey, 120HP,  $12499, false
+Ford, Explorer, Blue, 235HP,  $54999, true
+Chevrolet, Grand Vitara, Grey, 230HP,  $54000, false
+Chevrolet, Sail, Grey, 115HP,  $13999, true
+Ford, Edge, Black, 450HP,  $78000, true
+Chevrolet, Grand Vitara, Grey, 124HP,  $14500, false

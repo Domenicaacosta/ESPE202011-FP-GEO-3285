@@ -18,14 +18,14 @@ public class CarController {
 
     public void save(Car car) {
 
-        String data = car.getBrand() + ", " + car.getModel() + ", " + car.getColor() + ", " + car.getPower() + "HP, " + " $" + car.getPrice() + ", " + car.isStandar();
+        String data = car.getBrand() + "; " + car.getModel() + "; " + car.getColor() + "; " + car.getPower() + "; " + car.getPrice() + "; " + car.isStandar();
         FileManager.save(data, "cars");
     }
 
    public String read() {
 
         String data;
-        data = FileManager.read("cars");
+        data = FileManager.read("cars.csv");
         return data;
     }
     

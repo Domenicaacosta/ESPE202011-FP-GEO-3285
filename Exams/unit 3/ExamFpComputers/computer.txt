@@ -1,0 +1,4 @@
+
+APPLE; 1200.0; true; 64.0; Mac
+apple; 1200.0; false; 32.0; Mac
+apple; 1500.0; true; 64.0; Mac

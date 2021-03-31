@@ -44,7 +44,7 @@ public class FileManager {
         createFile(fileName);
 
         try {
-            FileWriter myWrite = new FileWriter(fileName + ".csv", true);
+            FileWriter myWrite = new FileWriter(fileName + ".txt", true);
             myWrite.write(System.getProperty("line.separator") + data);
             myWrite.close();
             System.out.println("a new record of " + fileName + " was saved");
@@ -55,18 +55,13 @@ public class FileManager {
         }
         return saved;
     }
-    
-    public static int returnSize(String fileName){
-    int numberOfLine;
-        return 0;
-    }
 
     public static String read(String fileName) {
-        
-        fileName = null;
+
+        fileName = " ";
         String information = " ";
-        String document = "C:\\Users\\Domenica\\OneDrive\\Desktop\\Programacion\\codigos github\\ESPE202011-FP-GEO-3285\\assignments\\unit 3\\HW21-ADT\\ConcessionarieSystem\\cars.txt";
-        try ( BufferedReader textBr = new BufferedReader(new FileReader(document))) {
+        String document = "C:\\Users\\Domenica\\OneDrive\\Desktop\\Programacion\\codigos github\\ESPE202011-FP-GEO-3285\\Exams\\unit 3\\ExamFpComputers\\computer.txt";
+       try ( BufferedReader textBr = new BufferedReader(new FileReader(document))) {
             while ((fileName = textBr.readLine()) != null) {
                 information += fileName + "\n";
             }
@@ -77,4 +72,5 @@ public class FileManager {
         return information;
 
     }
+
 }
